@@ -1,0 +1,23 @@
+# http://travis-ci.org/#!/gjhiggins/refo
+language: python
+# whitelist
+branches:
+  only:
+    - master
+python:
+    - "2.6"
+    - "2.7"
+    - "3.2"
+    - "pypy"
+
+install:
+    - pip install -r requirements.txt --use-mirrors
+    - python setup.py install
+script:
+    # Must run the tests in build/src so python3 doesn't get confused and run
+    # the python2 code from the current directory instead of the installed
+    # 2to3 version in build/src.
+    - if [[ $TRAVIS_PYTHON_VERSION != '3.2' ]]; then nosetests; fi
+    - if [[ $TRAVIS_PYTHON_VERSION == '3.2' ]]; then nosetests --where=./build/src; fi
+before_script:
+  - "flake8 --exit-zero refo"
