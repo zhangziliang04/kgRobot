@@ -1,0 +1,238 @@
+/* Stylesheet */
+
+
+/* Imports */
+
+@import url(animate.css);
+
+/* Selections */
+
+::selection {
+ 	color: #fff;
+ 	text-shadow: none;
+ 	background: #444;
+}
+
+::-moz-selection {
+ 	color: #fff;
+ 	text-shadow: none;
+ 	background: #444;
+}
+
+/* Basics */
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	background: #000222;
+	background: -moz-linear-gradient(top,  #000222 0%, #4b637c 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000222), color-stop(100%,#4b637c));
+	background: -webkit-linear-gradient(top,  #000222 0%,#4b637c 100%);
+	background: -o-linear-gradient(top,  #000222 0%,#4b637c 100%);
+	background: -ms-linear-gradient(top,  #000222 0%,#4b637c 100%);
+	background: linear-gradient(top,  #000222 0%,#4b637c 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000222', endColorstr='#4b637c',GradientType=0 );	
+}
+
+#container {
+	position: fixed;
+	width: 500px;
+	height: 300px;
+	top: 50%;
+	left: 50%;
+	margin-top: -150px;
+	margin-left: -250px;
+	text-align: center;
+	-webkit-animation-name: bounceInDown;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: bounceInDown;
+	-moz-animation-fill-mode: both;
+	-moz-animation-duration: 1.5s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	animation-name: bounceInDown;
+	animation-fill-mode: both;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+h1 {
+	font-size: 90px;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 0 1px 4px #000;
+	margin-top: 20px;
+}
+
+p {
+	width: 80%;
+	font-size: 23px;
+	line-height: 1.3em;
+	color: #fff;
+	margin: 1.1em auto;
+	text-align: center;
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.9);
+}
+
+p a {
+	color: #fff;
+	border-bottom: 2px solid #2da1ec;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+p a:hover {
+	color: #2da1ec;
+	border-bottom: 2px solid #fff;
+} 
+
+#subscribe {
+	margin: 0 auto;
+	text-align: center;
+}
+
+::-webkit-input-placeholder {
+   color: rgba(255, 255, 255, 0.4);
+}
+
+::-moz-input-placeholder {
+   color: rgba(255, 255, 255, 0.4);
+}
+
+input {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 25px;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+
+input[type=email] {
+	outline: none;
+	width: 90%;
+	padding: 15px;
+	margin: 0 auto;
+	color: #fff;
+	border: none;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background: rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.9);
+	-moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.9);
+	-o-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.9);
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+input[type=email]:hover {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+input[type=email]:focus {
+	-webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 1), 0 0 0 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 1), 0 0 0 5px rgba(0, 0, 0, 0.2);
+	-o-box-shadow: inset 0 0 8px rgba(0, 0, 0, 1), 0 0 0 5px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 0 8px rgba(0, 0, 0, 1), 0 0 0 5px rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.6);
+}
+
+input[type=submit] {
+	position: absolute;
+	margin-left: -105px;
+	margin-top: 5px;
+	font-size: 25px;
+	color: #222;
+	text-shadow: 0 1px 0 #fff;
+	padding: 10px;
+	width: 100px;
+	height: 50px;
+	border: none;
+	background: #f0f0f0;
+	background: -moz-linear-gradient(top, #f0f0f0 0%, #c3d7ff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(100%,#c3d7ff));
+	background: -webkit-linear-gradient(top, #f0f0f0 0%,#c3d7ff 100%);
+	background: -o-linear-gradient(top, #f0f0f0 0%,#c3d7ff 100%);
+	background: -ms-linear-gradient(top, #f0f0f0 0%,#c3d7ff 100%);
+	background: linear-gradient(top, #f0f0f0 0%,#c3d7ff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#c3d7ff',GradientType=0 );
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	-o-box-shadow: 0 0 5px rgba(0, 0, 0, 1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+	-o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+	width: 125px;
+	margin-left: -130px;
+	
+}
+
+input[type=submit]:active {
+	background: #c3d7ff;
+	background: -moz-linear-gradient(top,  #c3d7ff 0%, #f0f0f0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c3d7ff), color-stop(100%,#f0f0f0));
+	background: -webkit-linear-gradient(top,  #c3d7ff 0%,#f0f0f0 100%);
+	background: -o-linear-gradient(top,  #c3d7ff 0%,#f0f0f0 100%);
+	background: -ms-linear-gradient(top,  #c3d7ff 0%,#f0f0f0 100%);
+	background: linear-gradient(top,  #c3d7ff 0%,#f0f0f0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3d7ff', endColorstr='#f0f0f0',GradientType=0 );
+	
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 480px) {
+
+	#container {
+		width: 460px;
+		margin-left: -230px;
+	}
+	
+	
+}
+
+@media screen and (max-width: 320px) {
+
+	#container {
+		width: 300px;
+		margin-left: -150px;
+}
+	
+	input {
+		font-size: 20px;
+		padding: 5px;
+	}
+	
+	input[type=submit] {
+		margin: 0;
+		font-size: 20px;
+		width: 80px;
+		height: 40px;
+		padding: 5px;
+		margin-left: 217px;
+		margin-top: -43px;
+	}
+	
+}
+
+
